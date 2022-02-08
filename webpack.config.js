@@ -4,7 +4,7 @@ const path = require('path'),
 
 module.exports = {
     entry: {
-        app: ['./src/app/components/index.tsx'],
+        app: ['./src/index.tsx'],
         vendor: ['react', 'react-dom']
     },
     output: {
@@ -25,7 +25,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'app', 'components', 'index.html') }),
+        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html') }),
         new webpack.HotModuleReplacementPlugin()
     ]
 }
